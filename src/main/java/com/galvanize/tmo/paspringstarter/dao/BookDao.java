@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface BookDao {
 
-    default int insertBook(Book book){
+    default Book insertBook(Book book){
         return insertBook(book);
     }
 

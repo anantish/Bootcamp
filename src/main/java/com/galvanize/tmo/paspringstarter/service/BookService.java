@@ -14,13 +14,9 @@ public class BookService {
     private final BookDao bookDao;
 
     @Autowired
-    public BookService(@Qualifier("fakeDao") BookDao bookDao) {
-        this.bookDao = bookDao;
-    }
+    public BookService(@Qualifier("fakeDao") BookDao bookDao) { this.bookDao = bookDao; }
 
-    public int addBook(Book book){
-        return bookDao.insertBook(book);
-    }
+    public Book addBook(Book book){return bookDao.insertBook(book);  }
 
     public List<Book> getallBooks(){
         return bookDao.selectAllBooks();
